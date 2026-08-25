@@ -16,17 +16,19 @@ section{padding:72px 18px}.container{max-width:1120px;margin:auto}.title{text-al
 .timeline{max-width:900px;margin:auto}.ti{display:grid;grid-template-columns:125px 32px 1fr;align-items:center;margin:16px 0}.time{text-align:right;color:var(--blue);font-weight:900;font-size:14px}.dot{width:14px;height:14px;border-radius:50%;background:var(--orange);margin:auto;box-shadow:0 0 0 4px #ffd9ad}.tbox{background:#fff;border-radius:13px;padding:13px 17px;box-shadow:var(--shadow)}.tbox strong{color:var(--navy)}
 .signup{background:linear-gradient(135deg,#eef7ff,#fff8e9)}.signupgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.signupbox{background:#fff;padding:26px;border-radius:18px;box-shadow:var(--shadow)}.signupbox h3{color:var(--blue);margin-top:0}.notice{margin-top:18px;padding:16px;background:#fff4d2;border-left:5px solid var(--yellow);border-radius:8px}
 .rules{background:#fff;padding:28px;border-radius:18px;box-shadow:var(--shadow);max-width:900px;margin:auto}.rules h3{color:var(--blue);margin-top:0}
-.games{background:#eef4f9}.gamegrid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.game{background:#fff;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);transition:.2s}.game:hover{transform:translateY(-3px)}
+.games{background:#eef4f9}.gamegrid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.game{background:#fff;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);transition:.2s;display:flex;flex-direction:column}.game:hover{transform:translateY(-3px)}
 
-/* 圖片改為 contain 完整顯示，不裁剪 */
-.gameimg{width:100%;height:200px;object-fit:contain;display:block;background:#e9eef4;padding:8px}
+/* 標題置頂，圖片置中且自動適應完整顯示 */
+.gamehead{background:linear-gradient(135deg,#1769aa,#2c87c7);color:#fff;padding:16px 20px}.gamehead.orange{background:linear-gradient(135deg,#e97718,#f5a13b)}.gamehead small{opacity:.85;font-size:13px;letter-spacing:1px}.gamehead h4{font-size:22px;margin:2px 0 0}
+.gameimg-wrapper{background:#f0f4f8;border-bottom:1px solid #e2e8f0;padding:10px;text-align:center}
+.gameimg{width:100%;height:auto;max-height:360px;object-fit:contain;display:block;border-radius:8px}
 
-.gamehead{background:linear-gradient(135deg,#1769aa,#2c87c7);color:#fff;padding:17px 20px}.gamehead.orange{background:linear-gradient(135deg,#e97718,#f5a13b)}.gamehead small{opacity:.8}.gamehead h4{font-size:23px;margin:2px 0}.gamebody{padding:20px}.meta{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}.pill{background:#edf5fb;color:var(--blue);font-size:13px;font-weight:800;border-radius:20px;padding:4px 10px}.gamebody ul{padding-left:21px}.highlight{background:#fff4d2;border-left:4px solid var(--orange);padding:10px 13px;border-radius:7px;font-weight:800}
+.gamebody{padding:20px;flex:1}.meta{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}.pill{background:#edf5fb;color:var(--blue);font-size:13px;font-weight:800;border-radius:20px;padding:4px 10px}.gamebody ul{padding-left:21px;margin-bottom:0}.highlight{background:#fff4d2;border-left:4px solid var(--orange);padding:10px 13px;border-radius:7px;font-weight:800;margin-top:12px}
 .transport{background:#fff}.transportbox{max-width:850px;margin:auto;background:linear-gradient(135deg,#0d3b66,#1769aa);color:#fff;text-align:center;padding:32px;border-radius:20px}.transportbox h3{font-size:25px;margin:0 0 8px}
 footer{background:#092d4d;color:#fff;text-align:center;padding:32px 18px}footer p{opacity:.75;margin:4px}
 .top{position:fixed;right:18px;bottom:18px;width:46px;height:46px;border:0;border-radius:50%;background:var(--orange);color:#fff;font-size:20px;display:none;z-index:30;cursor:pointer}
 @media(max-width:900px){.grid4{grid-template-columns:repeat(2,1fr)}.links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--navy);flex-direction:column;padding:8px 15px 15px}.links.open{display:flex}.hamb{display:block}}
-@media(max-width:650px){section{padding:55px 14px}.grid4,.signupgrid,.gamegrid{grid-template-columns:1fr}.gameimg{height:160px}.ti{grid-template-columns:35px 1fr}.time{grid-column:2;text-align:left}.dot{grid-column:1;grid-row:1 / span 2}.tbox{grid-column:2}.brand{font-size:15px}}
+@media(max-width:650px){section{padding:55px 14px}.grid4,.signupgrid,.gamegrid{grid-template-columns:1fr}.ti{grid-template-columns:35px 1fr}.time{grid-column:2;text-align:left}.dot{grid-column:1;grid-row:1 / span 2}.tbox{grid-column:2}.brand{font-size:15px}}
 </style>
 </head>
 <body>
@@ -50,7 +52,7 @@ footer{background:#092d4d;color:#fff;text-align:center;padding:32px 18px}footer 
 </header>
 
 <section id="info"><div class="container">
-<div class="title"><div class="tag">EVENT INFORMATION</div><h2>活動資訊</h2><p>一起參與，創造屬於我們的團隊回億！</p></div>
+<div class="title"><div class="tag">EVENT INFORMATION</div><h2>活動資訊</h2><p>一起參與，創造屬於我們的團隊回憶！</p></div>
 <div class="grid4">
 <div class="info"><div class="icon">🏢</div><h3>主辦單位</h3><p>總務部</p></div>
 <div class="info"><div class="icon">🤝</div><h3>協辦單位</h3><p>福委會</p></div>
@@ -102,17 +104,41 @@ footer{background:#092d4d;color:#fff;text-align:center;padding:32px 18px}footer 
 
 <div class="gamegrid">
 
-<div class="game"><img class="gameimg" src="slide-07-img-1.png" alt="繩隊友遊戲示意圖"><div class="gamehead"><small>暖身賽 01</small><h4>🪢 繩隊友</h4></div><div class="gamebody"><p>5人合力控制橡皮筋，將A桌的杯子移至B桌並疊成3個杯子的金字塔。</p><div class="meta"><span class="pill">👥 5人</span><span class="pill">⏱ 約3分鐘</span><span class="pill">📏 3公尺</span></div><ul><li>掉落要由原點重新開始。</li><li>距離3公尺。</li></ul></div></div>
+<div class="game">
+  <div class="gamehead"><small>暖身賽 01</small><h4>🪢 繩隊友</h4></div>
+  <div class="gameimg-wrapper"><img class="gameimg" src="slide-07-img-1.png" alt="繩隊友遊戲示意圖"></div>
+  <div class="gamebody"><p>5人合力控制橡皮筋，將A桌的杯子移至B桌並疊成3個杯子的金字塔。</p><div class="meta"><span class="pill">👥 5人</span><span class="pill">⏱ 約3分鐘</span><span class="pill">📏 3公尺</span></div><ul><li>掉落要由原點重新開始。</li><li>距離3公尺。</li></ul></div>
+</div>
 
-<div class="game"><img class="gameimg" src="slide-08-img-1.png" alt="蓋傳球遊戲示意圖"><div class="gamehead"><small>暖身賽 02</small><h4>🏓 蓋傳球</h4></div><div class="gamebody"><p>5人運用A4紙箱蓋傳遞乒乓球，由A點移動至B點，過程中人員需隨球移動。</p><div class="meta"><span class="pill">👥 5人</span><span class="pill">⏱ 約3分鐘</span><span class="pill">📏 3公尺</span></div><ul><li>掉落要由原點重新開始。</li><li>距離3公尺。</li></ul></div></div>
+<div class="game">
+  <div class="gamehead"><small>暖身賽 02</small><h4>🏓 蓋傳球</h4></div>
+  <div class="gameimg-wrapper"><img class="gameimg" src="slide-08-img-1.png" alt="蓋傳球遊戲示意圖"></div>
+  <div class="gamebody"><p>5人運用A4紙箱蓋傳遞乒乓球，由A點移動至B點，過程中人員需隨球移動。</p><div class="meta"><span class="pill">👥 5人</span><span class="pill">⏱ 約3分鐘</span><span class="pill">📏 3公尺</span></div><ul><li>掉落要由原點重新開始。</li><li>距離3公尺。</li></ul></div>
+</div>
 
-<div class="game"><img class="gameimg" src="slide-09-img-1.jpg" alt="紙杯平衡遊戲示意圖"><div class="gamehead orange"><small>闖關 01</small><h4>🥤 紙杯平衡</h4></div><div class="gamebody"><p>紙杯依「正、倒、正」順序堆疊，持平走到指定距離放下。</p><div class="meta"><span class="pill">👤 1人</span><span class="pill">⏱ 約3分鐘</span></div><ul><li>掉落要由原點重新開始。</li></ul><div class="highlight">成功即可交棒進行下一關。</div></div></div>
+<div class="game">
+  <div class="gamehead orange"><small>闖關 01</small><h4>🥤 紙杯平衡</h4></div>
+  <div class="gameimg-wrapper"><img class="gameimg" src="slide-09-img-1.jpg" alt="紙杯平衡遊戲示意圖"></div>
+  <div class="gamebody"><p>紙杯依「正、倒、正」順序堆疊，持平走到指定距離放下。</p><div class="meta"><span class="pill">👤 1人</span><span class="pill">⏱ 約3分鐘</span></div><ul><li>掉落要由原點重新開始。</li></ul><div class="highlight">成功即可交棒進行下一關。</div></div>
+</div>
 
-<div class="game"><img class="gameimg" src="slide-10-img-1.png" alt="吹乒乓球遊戲示意圖"><div class="gamehead orange"><small>闖關 02</small><h4>💨 吹球挑戰</h4></div><div class="gamebody"><p>吹氣將杯中乒乓球吹出。</p><div class="meta"><span class="pill">👤 1人</span><span class="pill">⏱ 2分鐘</span><span class="pill">🎯 3次機會</span></div><ul><li>限3次吹球機會。</li><li>失敗須回上關。</li><li>不得以手碰觸乒乓球及紙杯。</li></ul></div></div>
+<div class="game">
+  <div class="gamehead orange"><small>闖關 02</small><h4>💨 吹球挑戰</h4></div>
+  <div class="gameimg-wrapper"><img class="gameimg" src="slide-10-img-1.png" alt="吹乒乓球遊戲示意圖"></div>
+  <div class="gamebody"><p>吹氣將杯中乒乓球吹出。</p><div class="meta"><span class="pill">👤 1人</span><span class="pill">⏱ 2分鐘</span><span class="pill">🎯 3次機會</span></div><ul><li>限3次吹球機會。</li><li>失敗須回上關。</li><li>不得以手碰觸乒乓球及紙杯。</li></ul></div>
+</div>
 
-<div class="game"><img class="gameimg" src="slide-11-img-1.png" alt="寶特瓶穿越遊戲示意圖"><div class="gamehead orange"><small>闖關 03</small><h4>🏓 寶特瓶穿越</h4></div><div class="gamebody"><p>將乒乓球滾過兩個寶特瓶中間。</p><div class="meta"><span class="pill">👤 1人</span><span class="pill">⏱ 2分鐘</span><span class="pill">🎯 3次機會</span></div><ul><li>寶特瓶距離90公分。</li><li>限3次球機會，失敗須回上關。</li><li>寶特瓶不得傾倒或碰倒。</li></ul></div></div>
+<div class="game">
+  <div class="gamehead orange"><small>闖關 03</small><h4>🏓 寶特瓶穿越</h4></div>
+  <div class="gameimg-wrapper"><img class="gameimg" src="slide-11-img-1.png" alt="寶特瓶穿越遊戲示意圖"></div>
+  <div class="gamebody"><p>將乒乓球滾過兩個寶特瓶中間。</p><div class="meta"><span class="pill">👤 1人</span><span class="pill">⏱ 2分鐘</span><span class="pill">🎯 3次機會</span></div><ul><li>寶特瓶距離90公分。</li><li>限3次球機會，失敗須回上關。</li><li>寶特瓶不得傾倒或碰倒。</li></ul></div>
+</div>
 
-<div class="game"><img class="gameimg" src="slide-12-img-1.png" alt="拋接寶特瓶遊戲示意圖"><div class="gamehead orange"><small>闖關 04</small><h4>🍾 拋接寶特瓶</h4></div><div class="gamebody"><p>一人拋出寶特瓶，另一人以桌球拍接住，並使瓶子站立於球拍上。</p><div class="meta"><span class="pill">👥 2人</span><span class="pill">⏱ 約3分鐘</span><span class="pill">🎯 無次數限制</span></div><ul><li>兩人相距2～3公尺。</li><li>接瓶者僅能使用桌球拍接瓶。</li></ul></div></div>
+<div class="game">
+  <div class="gamehead orange"><small>闖關 04</small><h4>🍾 拋接寶特瓶</h4></div>
+  <div class="gameimg-wrapper"><img class="gameimg" src="slide-12-img-1.png" alt="拋接寶特瓶遊戲示意圖"></div>
+  <div class="gamebody"><p>一人拋出寶特瓶，另一人以桌球拍接住，並使瓶子站立於球拍上。</p><div class="meta"><span class="pill">👥 2人</span><span class="pill">⏱ 約3分鐘</span><span class="pill">🎯 無次數限制</span></div><ul><li>兩人相距2～3公尺。</li><li>接瓶者僅能使用桌球拍接瓶。</li></ul></div>
+</div>
 
 </div></div></section>
 
@@ -120,15 +146,35 @@ footer{background:#092d4d;color:#fff;text-align:center;padding:32px 18px}footer 
 <div class="title"><div class="tag">INDIVIDUAL CHALLENGE</div><h2>🎯 個人自由闖關</h2><p>活動當日現場領單，自由挑戰5個趣味關卡</p></div>
 <div class="gamegrid">
 
-<div class="game"><img class="gameimg" src="slide-13-img-1.jpg" alt="紙杯平衡遊戲示意圖"><div class="gamehead orange"><small>個人關卡 01</small><h4>🥤 紙杯平衡</h4></div><div class="gamebody"><p>紙杯「正、倒、正」堆疊，持平走到指定距離。</p><ul><li>途中掉落需重新排隊。</li></ul></div></div>
+<div class="game">
+  <div class="gamehead orange"><small>個人關卡 01</small><h4>🥤 紙杯平衡</h4></div>
+  <div class="gameimg-wrapper"><img class="gameimg" src="slide-13-img-1.jpg" alt="紙杯平衡遊戲示意圖"></div>
+  <div class="gamebody"><p>紙杯「正、倒、正」堆疊，持平走到指定距離。</p><ul><li>途中掉落需重新排隊。</li></ul></div>
+</div>
 
-<div class="game"><img class="gameimg" src="slide-10-img-1.png" alt="吹乒乓球遊戲示意圖"><div class="gamehead orange"><small>個人關卡 02</small><h4>💨 吹乒乓球</h4></div><div class="gamebody"><p>吹氣將杯中乒乓球吹出。</p><ul><li>2次失敗需重新排隊。</li></ul></div></div>
+<div class="game">
+  <div class="gamehead orange"><small>個人關卡 02</small><h4>💨 吹乒乓球</h4></div>
+  <div class="gameimg-wrapper"><img class="gameimg" src="slide-10-img-1.png" alt="吹乒乓球遊戲示意圖"></div>
+  <div class="gamebody"><p>吹氣將杯中乒乓球吹出。</p><ul><li>2次失敗需重新排隊。</li></ul></div>
+</div>
 
-<div class="game"><img class="gameimg" src="slide-14-img-2.jpg" alt="乒乓球穿越遊戲示意圖"><div class="gamehead orange"><small>個人關卡 03</small><h4>🏓 乒乓球穿越</h4></div><div class="gamebody"><p>乒乓球滾過寶特瓶中間。</p><ul><li>2次失敗需重新排隊。</li></ul></div></div>
+<div class="game">
+  <div class="gamehead orange"><small>個人關卡 03</small><h4>🏓 乒乓球穿越</h4></div>
+  <div class="gameimg-wrapper"><img class="gameimg" src="slide-14-img-2.jpg" alt="乒乓球穿越遊戲示意圖"></div>
+  <div class="gamebody"><p>乒乓球滾過寶特瓶中間。</p><ul><li>2次失敗需重新排隊。</li></ul></div>
+</div>
 
-<div class="game"><img class="gameimg" src="slide-14-img-1.png" alt="飛耀橡皮擦遊戲示意圖"><div class="gamehead orange"><small>個人關卡 04</small><h4>📏 飛耀橡皮擦</h4></div><div class="gamebody"><p>以尺彈射橡皮擦進入杯中。</p><div class="meta"><span class="pill">📏 距離60公分</span></div><ul><li>2次失敗需重新排隊。</li><li>橡皮擦與杯子距離60公分。</li></ul></div></div>
+<div class="game">
+  <div class="gamehead orange"><small>個人關卡 04</small><h4>📏 飛耀橡皮擦</h4></div>
+  <div class="gameimg-wrapper"><img class="gameimg" src="slide-14-img-1.png" alt="飛耀橡皮擦遊戲示意圖"></div>
+  <div class="gamebody"><p>以尺彈射橡皮擦進入杯中。</p><div class="meta"><span class="pill">📏 距離60公分</span></div><ul><li>2次失敗需重新排隊。</li><li>橡皮擦與杯子距離60公分。</li></ul></div>
+</div>
 
-<div class="game"><img class="gameimg" src="slide-15-img-1.png" alt="神抽假鈔遊戲示意圖"><div class="gamehead orange"><small>個人關卡 05</small><h4>💵 神抽假鈔</h4></div><div class="gamebody"><p>快速抽出玻璃瓶口下的假鈔，且瓶上乒乓球不可倒下。</p><ul><li>2次失敗需重新排隊。</li><li>不得碰觸或扶持瓶子、球體。</li></ul></div></div>
+<div class="game">
+  <div class="gamehead orange"><small>個人關卡 05</small><h4>💵 神抽假鈔</h4></div>
+  <div class="gameimg-wrapper"><img class="gameimg" src="slide-15-img-1.png" alt="神抽假鈔遊戲示意圖"></div>
+  <div class="gamebody"><p>快速抽出玻璃瓶口下的假鈔，且瓶上乒乓球不可倒下。</p><ul><li>2次失敗需重新排隊。</li><li>不得碰觸或扶持瓶子、球體。</li></ul></div>
+</div>
 
 </div>
 <div class="notice" style="margin-top:24px;text-align:center"><strong>🏆 個人闖關獎金</strong><br>完成5關且在前40名者，每人300元。</div>
@@ -137,7 +183,11 @@ footer{background:#092d4d;color:#fff;text-align:center;padding:32px 18px}footer 
 <section class="games"><div class="container">
 <div class="title"><div class="tag">FREE EXPERIENCE</div><h2>🔥 高難度趣味遊戲</h2><p>自由體驗</p></div>
 <div class="gamegrid">
-<div class="game"><img class="gameimg" src="slide-16-img-1.png" alt="木棒鐵環立瓶挑戰示意圖"><div class="gamehead"><small>自由體驗</small><h4>🍾 木棒與鐵環立瓶</h4></div><div class="gamebody"><p>利用木棒與鐵環，將倒放的玻璃瓶成功立起。</p><ul><li>不得以手碰觸玻璃瓶。</li></ul></div></div>
+<div class="game">
+  <div class="gamehead"><small>自由體驗</small><h4>🍾 木棒與鐵環立瓶</h4></div>
+  <div class="gameimg-wrapper"><img class="gameimg" src="slide-16-img-1.png" alt="木棒鐵環立瓶挑戰示意圖"></div>
+  <div class="gamebody"><p>利用木棒與鐵環，將倒放的玻璃瓶成功立起。</p><ul><li>不得以手碰觸玻璃瓶。</li></ul></div>
+</div>
 </div></div></section>
 
 <section class="transport"><div class="transportbox"><h3>🚌 外籍同仁接駁資訊</h3><p>活動當天中午加開班車，夜班與中班同仁可於12:00到達公司，晚班16:00搭車返回宿舍。</p></div></section>
