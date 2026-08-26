@@ -11,14 +11,18 @@
 .nav{position:sticky;top:0;z-index:20;background:rgba(13,59,102,.96);backdrop-filter:blur(10px)}.navin{max-width:1180px;margin:auto;height:64px;padding:0 18px;display:flex;align-items:center;justify-content:space-between}.brand{color:#fff;font-weight:900}.links{display:flex;gap:4px}.links a{color:#fff;text-decoration:none;padding:8px 11px;border-radius:8px;font-size:14px}.links a:hover{background:#ffffff1f}.hamb{display:none;color:#fff;font-size:28px;cursor:pointer}
 .hero{position:relative;overflow:hidden;color:#fff;text-align:center;padding:78px 18px 82px;background:radial-gradient(circle at 15% 15%,#ffd16655,transparent 24%),radial-gradient(circle at 85% 20%,#f28c2855,transparent 25%),linear-gradient(135deg,#0d3b66,#1769aa)}.hero>*{position:relative;z-index:1}.badge{display:inline-block;background:var(--yellow);color:#604500;font-weight:900;padding:6px 18px;border-radius:30px}.hero h1{font-size:clamp(36px,6vw,68px);line-height:1.18;margin:18px 0 12px}.hero h1 span{color:var(--yellow)}.hero p{font-size:clamp(17px,2.4vw,25px);margin:0 0 30px}.hero-info{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}.hero-info div{background:#ffffff18;border:1px solid #ffffff33;padding:12px 20px;border-radius:14px}.hero-info strong{display:block;font-size:19px}.hero-info small{opacity:.8}
 section{padding:72px 18px}.container{max-width:1120px;margin:auto}.title{text-align:center;margin-bottom:38px}.title .tag{color:var(--orange);font-weight:900;letter-spacing:2px;font-size:13px}.title h2{color:var(--navy);font-size:34px;margin:3px 0}.title p{color:var(--muted);margin:0}
-.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.info,.award,.card{background:#fff;border-radius:18px;box-shadow:var(--shadow)}.info{text-align:center;padding:25px 15px}.icon{font-size:36px}.info h3{margin:4px 0;color:var(--blue)}.info p{margin:0;color:var(--muted)}
+
+/* ===== 新增 .grid3 的設定，並保留原本的 .grid4 ===== */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:960px;margin:auto} /* 將3格限縮寬度並置中 */
+
+.info,.award,.card{background:#fff;border-radius:18px;box-shadow:var(--shadow)}.info{text-align:center;padding:25px 15px}.icon{font-size:36px}.info h3{margin:4px 0;color:var(--blue)}.info p{margin:0;color:var(--muted)}
 .awards{background:#fff}.award{padding:24px;text-align:center;border-top:5px solid var(--blue)}.award:nth-child(1){border-color:#d7a600}.award:nth-child(2){border-color:#9aa1aa}.award:nth-child(3){border-color:#bd7135}.award:nth-child(4){border-color:var(--orange)}.rank{font-size:40px}.money{color:var(--orange);font-size:29px;font-weight:900}
 .timeline{max-width:900px;margin:auto}.ti{display:grid;grid-template-columns:125px 32px 1fr;align-items:center;margin:16px 0}.time{text-align:right;color:var(--blue);font-weight:900;font-size:14px}.dot{width:14px;height:14px;border-radius:50%;background:var(--orange);margin:auto;box-shadow:0 0 0 4px #ffd9ad}.tbox{background:#fff;border-radius:13px;padding:13px 17px;box-shadow:var(--shadow)}.tbox strong{color:var(--navy)}
 .signup{background:linear-gradient(135deg,#eef7ff,#fff8e9)}.signupgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.signupbox{background:#fff;padding:26px;border-radius:18px;box-shadow:var(--shadow)}.signupbox h3{color:var(--blue);margin-top:0}.notice{margin-top:18px;padding:16px;background:#fff4d2;border-left:5px solid var(--yellow);border-radius:8px}
 .rules{background:#fff;padding:28px;border-radius:18px;box-shadow:var(--shadow);max-width:900px;margin:auto}.rules h3{color:var(--blue);margin-top:0}
 .games{background:#eef4f9}.gamegrid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}.game{background:#fff;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);transition:.2s;display:flex;flex-direction:column}.game:hover{transform:translateY(-3px)}
 
-/* 標題置頂，圖片置中且自動適應完整顯示 */
 .gamehead{background:linear-gradient(135deg,#1769aa,#2c87c7);color:#fff;padding:16px 20px}.gamehead.orange{background:linear-gradient(135deg,#e97718,#f5a13b)}.gamehead small{opacity:.85;font-size:13px;letter-spacing:1px}.gamehead h4{font-size:22px;margin:2px 0 0}
 .gameimg-wrapper{background:#f0f4f8;border-bottom:1px solid #e2e8f0;padding:10px;text-align:center}
 .gameimg{width:100%;height:auto;max-height:360px;object-fit:contain;display:block;border-radius:8px}
@@ -27,8 +31,10 @@ section{padding:72px 18px}.container{max-width:1120px;margin:auto}.title{text-al
 .transport{background:#fff}.transportbox{max-width:850px;margin:auto;background:linear-gradient(135deg,#0d3b66,#1769aa);color:#fff;text-align:center;padding:32px;border-radius:20px}.transportbox h3{font-size:25px;margin:0 0 8px}
 footer{background:#092d4d;color:#fff;text-align:center;padding:32px 18px}footer p{opacity:.75;margin:4px}
 .top{position:fixed;right:18px;bottom:18px;width:46px;height:46px;border:0;border-radius:50%;background:var(--orange);color:#fff;font-size:20px;display:none;z-index:30;cursor:pointer}
-@media(max-width:900px){.grid4{grid-template-columns:repeat(2,1fr)}.links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--navy);flex-direction:column;padding:8px 15px 15px}.links.open{display:flex}.hamb{display:block}}
-@media(max-width:650px){section{padding:55px 14px}.grid4,.signupgrid,.gamegrid{grid-template-columns:1fr}.ti{grid-template-columns:35px 1fr}.time{grid-column:2;text-align:left}.dot{grid-column:1;grid-row:1 / span 2}.tbox{grid-column:2}.brand{font-size:15px}}
+
+/* 手機版與平板排版同步加入 .grid3 */
+@media(max-width:900px){.grid4, .grid3 {grid-template-columns:repeat(2,1fr)}.links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--navy);flex-direction:column;padding:8px 15px 15px}.links.open{display:flex}.hamb{display:block}}
+@media(max-width:650px){section{padding:55px 14px}.grid4, .grid3, .signupgrid, .gamegrid {grid-template-columns:1fr}.ti{grid-template-columns:35px 1fr}.time{grid-column:2;text-align:left}.dot{grid-column:1;grid-row:1 / span 2}.tbox{grid-column:2}.brand{font-size:15px}}
 </style>
 </head>
 <body>
@@ -53,14 +59,20 @@ footer{background:#092d4d;color:#fff;text-align:center;padding:32px 18px}footer 
 
 <section id="info"><div class="container">
 <div class="title"><div class="tag">EVENT INFORMATION</div><h2>活動資訊</h2><p>一起參與，創造屬於我們的團隊回憶！</p></div>
-<div class="grid4">
+
+<!-- ===== 這裡將 class="grid4" 改成了 class="grid3" ===== -->
+<div class="grid3">
 <div class="info"><div class="icon">🏢</div><h3>主辦單位</h3><p>總務部</p></div>
 <div class="info"><div class="icon">👨‍👩‍👧‍👦</div><h3>活動對象</h3><p>全通科技全體員工</p></div>
 <div class="info"><div class="icon">📍</div><h3>活動地點</h3><p>D棟301會議室</p></div>
-</div></div></section>
+</div>
+<!-- ============================================== -->
+
+</div></section>
 
 <section class="awards" id="award"><div class="container">
 <div class="title"><div class="tag">PRIZE</div><h2>獎金制度</h2><p>團體賽與個人闖關皆有機會獲得獎金</p></div>
+<!-- 獎金區塊保留4欄不變 -->
 <div class="grid4">
 <div class="award"><div class="rank">🥇</div><h3>第一名</h3><div class="money">$3,500</div></div>
 <div class="award"><div class="rank">🥈</div><h3>第二名</h3><div class="money">$2,500</div></div>
@@ -86,7 +98,7 @@ footer{background:#092d4d;color:#fff;text-align:center;padding:32px 18px}footer 
 <section class="signup" id="signup"><div class="container">
 <div class="title"><div class="tag">REGISTRATION</div><h2>報名辦法</h2></div>
 <div class="signupgrid">
-<div class="signupbox"><h3>👥 團體組隊</h3><ul><li>自由組隊，每組5人。</li><li>組別及男女皆不限。</li><li>由海報 QR Code 填寫報名表單。</li><li>報名時間：即日起至115/9/14止。</li></ul></div>
+<div class="signupbox"><h3>👥 團體組隊</h3><ul><li>自由組隊，每組5人。</li><li>組別及男女皆不限。</li><li>由海報 QR Code 填寫報名表單。</li><li>報名時間：即日起至115/9/18。</li></ul></div>
 <div class="signupbox"><h3>🎯 個人自由闖關</h3><ul><li>活動當日現場領單報名。</li><li>完成5關挑戰。</li><li>前40名可獲得300元獎金。</li></ul></div>
 </div>
 <div class="notice"><strong>🚌 接駁提醒</strong><br>活動當天中午加開班車，夜班與中班同仁可於12:00到達公司，晚班16:00搭車返回宿舍。</div>
@@ -102,7 +114,6 @@ footer{background:#092d4d;color:#fff;text-align:center;padding:32px 18px}footer 
 <div class="title"><div class="tag">TEAM CHALLENGE</div><h2>🤝 團體賽</h2><p>5人一隊，考驗團隊默契與合作技巧</p></div>
 
 <div class="gamegrid">
-
 <div class="game">
   <div class="gamehead"><small>暖身賽 01</small><h4>🪢 繩隊友</h4></div>
   <div class="gameimg-wrapper"><img class="gameimg" src="slide-07-img-1.png" alt="繩隊友遊戲示意圖"></div>
@@ -138,7 +149,6 @@ footer{background:#092d4d;color:#fff;text-align:center;padding:32px 18px}footer 
   <div class="gameimg-wrapper"><img class="gameimg" src="slide-12-img-1.png" alt="拋接寶特瓶遊戲示意圖"></div>
   <div class="gamebody"><p>一人拋出寶特瓶，另一人以桌球拍接住，並使瓶子站立於球拍上。</p><div class="meta"><span class="pill">👥 2人</span><span class="pill">⏱ 約3分鐘</span><span class="pill">🎯 無次數限制</span></div><ul><li>兩人相距2～3公尺。</li><li>接瓶者僅能使用桌球拍接瓶。</li></ul></div>
 </div>
-
 </div></div></section>
 
 <section id="personal"><div class="container">
@@ -191,7 +201,7 @@ footer{background:#092d4d;color:#fff;text-align:center;padding:32px 18px}footer 
 
 <section class="transport"><div class="transportbox"><h3>🚌 外籍同仁接駁資訊</h3><p>活動當天中午加開班車，夜班與中班同仁可於12:00到達公司，晚班16:00搭車返回宿舍。</p></div></section>
 
-<footer><strong>🎉 115年員工團體趣味活動競賽</strong><p>主辦單位：總務部 </p><p>全通科技股份有限公司</p></footer>
+<footer><strong>🎉 115年員工團體趣味活動競賽</strong><p>主辦單位：總務部 ｜ 協辦單位：福委會</p><p>全通科技股份有限公司</p></footer>
 
 <button class="top" id="top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
